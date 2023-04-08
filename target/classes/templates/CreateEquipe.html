@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="template2">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajouter Equipe</title>
+  <link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css" />
+  <script type="text/javascript" src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div layout:fragment="Mycontent">
+  <div class="container mt-5">
+    <div class="card-body">
+      <form action="saveEquipe" method="post">
+        <div class="form-group">
+          <label class="control-label">Nom Equipe :</label>
+          <input type="text" name="nomEquipe" class="form-control"/>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Pays d' equipe :</label>
+          <input type="text" name="paysEquipe" class="form-control"/>
+        </div>
+        <div class="form-group">
+          <label class="control-label">date found :</label>
+          <input type="date" name="date" class="form-control"/>
+        </div>
+        <div>
+          <button type="submit" class="btn btn-primary">Ajouter</button>
+        </div>
+      </form>
+    </div>
+    <br/>
+    <br/>
+    <a href="ListeEquipe">Liste equipe</a>
+  </div>
+</div>
+</body>
+</html>
